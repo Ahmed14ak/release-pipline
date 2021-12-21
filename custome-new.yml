@@ -27,7 +27,7 @@ stages:
     # Task-2: Copy kube-manifest files to Build Artifact Directory
     - task: CopyFiles@2
       inputs:
-        SourceFolder: '$(System.DefaultWorkingDirectory)/kube'
+        SourceFolder: '$(System.DefaultWorkingDirectory)/'
         Contents: '**'
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
         OverWrite: true
