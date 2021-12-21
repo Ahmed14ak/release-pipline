@@ -27,10 +27,9 @@ stages:
     # Task-2: Copy kube-manifest files to Build Artifact Directory
     - task: CopyFiles@2
       inputs:
-        SourceFolder: '$(System.DefaultWorkingDirectory)/'
+        SourceFolder: '$(System.DefaultWorkingDirectory)/kube'
         Contents: '**'
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
-        OverWrite: true
     # List files from Build Artifact Staging Directory - After Copy
     - bash: echo After copying to Build Artifact Directory; ls -R $(Build.ArtifactStagingDirectory)    
     # Task-3: Publish build artifacts (Publish build to Azure Pipelines)
