@@ -8,7 +8,7 @@ trigger:
 # variables
 variables: 
   tag: "$(Build.BuildID)"
-satges:
+stages:
 - stage: Build
   displayNmae: Build Stage
   jobs:
